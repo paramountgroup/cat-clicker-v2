@@ -63,18 +63,23 @@
 
         <div class="row">
 
-            <div class="col-md-3">
-                <p class="lead">Leader Board</p>
-                <div class="list-group">
-                
-                    <span data-bind="text: name"></span> <!-- My attempt to data bind with knockout no luck -->
+            <table class="col-md-3">
+                <th class="lead">Leader Board</th>
+                <tbody class="list-group">
+                	<tr class="list-group-item ">
+                 
+                          <td data-bind="text: name"></td>
+                          <td class="badge badge-vertical" data-bind="text: clickCount" ></td>
+              
+                         
+                     </tr>  <!-- My attempt to data bind with knockout no luck -->
                     
                     <span class="list-group-item">Fezzik&nbsp&nbsp<input id="qty2" value="0" /></span>
                     <span class="list-group-item">Vesper&nbsp<input id="qty3" value="0" /></span>
                     <span class="list-group-item">Marvin&nbsp&nbsp<input id="qty4" value="0" /></span>
                     <span class="list-group-item">2-Cats&nbsp&nbsp<input id="qty5" value="0" /></span>
-                </div>
-            </div>
+                </tbody>
+            </table>
 
             <div class="col-md-9">
 
@@ -89,7 +94,7 @@
                             </ol>
                             <div class="carousel-inner">
                                 <div class="item active">
-                                    <img class="slide-image" src="img/kitkat-opt-1920x1280.jpg" alt="kitkat photo">
+                                    <img class="slide-image" src="" alt="kitkat photo" data-bind="click: incrementCounter, attr: {src:imgSrc}">
                                 </div>
                                 <div class="item">
                                     <img class="slide-image" src="img/fezzik-3-opt-1920x1280.jpg" alt="fezzik photo">
@@ -209,11 +214,13 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
     
-    <!-- Script for Counter  -->
-    <script type="text/javascript" src="js/script.js"></script>
+  
     
       <!-- knoockout file  -->
     <script type="text/javascript" src="js/knockout-3.4.0.js"></script>
+    
+      <!-- Script for Counter  -->
+    <script type="text/javascript" src="js/script.js"></script>
 
 
 

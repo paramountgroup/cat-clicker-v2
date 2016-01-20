@@ -52,3 +52,7 @@ body {
 footer {
     margin: 50px 0;
 }
+.badge-vertical {
+	vertical-align: middle;
+	margin-top: -15px;
+}
