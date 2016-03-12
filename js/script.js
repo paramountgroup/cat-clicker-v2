@@ -46,6 +46,7 @@ var cat = function (data) {
 	this.imgSrcLarge = ko.observable(data.imgSrcLarge);
 	this.imgAttribution = ko.observable('http://www.theparamountgroup.us');
 	this.bio = ko.observable(data.bio);
+	this.alt = ko.observable(data.alt);
 	};
 
 var ViewModel = function() {
