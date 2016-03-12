@@ -63,7 +63,7 @@
 
         <div class="row">
 
-            <table class="col-md-3">
+            <table class="col-sm-4 col-lg-4 col-md-4">
                 <th class="lead">Leader Board</th>
                 <tbody class="list-group" data-bind="foreach: catList">
                 	<tr class="list-group-item">
@@ -73,52 +73,13 @@
                 </tbody>
             </table>
 
-            <div class="col-md-9">
+          
 
-                <div class="row carousel-holder">
+        
+        
+            <div data-bind="foreach: catList">
 
-                    <div class="col-md-9">
-                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                            <ol class="carousel-indicators">
-                                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                            </ol>
-                            <div class="carousel-inner" data-bind="foreach: catList">
-                                <div class="item active">
-                                    <img class="slide-image" src"" alt="kitkat photo" data-bind="click: $parent.incrementCounter, attr: {src:imgSrcLarge}">
-                                </div>
-  <!--                              <div class="item">
-                                    <img class="slide-image" src="img/fezzik-3-opt-1920x1280.jpg" alt="fezzik photo" >
-                                </div>
-                                <div class="item">
-                                    <img class="slide-image" src="img/vesper-opt-1920x1280.jpg" alt="vesper photo">
-                                </div>
-                                 <div class="item">
-                                    <img class="slide-image" src="img/marvin-opt-1920x1280.jpg" alt="marvin photo">
-                                </div>
-                                 <div class="item">
-                                    <img class="slide-image" src="img/cats-in-window-opt-1920x1280.jpg" alt="cats in window photo">
-                                </div> -->
-                            </div>
-                            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-                                <span class="glyphicon glyphicon-chevron-left"></span>
-                            </a>
-                            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-                                <span class="glyphicon glyphicon-chevron-right"></span>
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
-
-
-            </div>
-
-        </div>
-        <div class="row">
-
-                    <div data-bind="foreach: catList" class="col-sm-4 col-lg-4 col-md-4"  >
+                    <div class="col-sm-4 col-lg-4 col-md-4"  >
                         <div class="thumbnail">
                             <img src="" alt="" data-bind="click: $parent.incrementCounter, attr: {src:imgSrcSmall}">
                             <div class="caption">
@@ -129,58 +90,16 @@
                            
                         </div>
                     </div>
+             </div>
 
- <!--                   <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <img src="img/fezzik-opt-230x153.jpg" alt="fezzik the cat" onclick="modify_qty(1)">
-                            <div class="caption">
-                                <h4><a href="#">Vote for Fezzik</a>
-                                </h4>
-                                <p>Fezzik is a fun loving cat that lives in San Mateo CA. Fezzik enjoys the teperate climate of the Bay Area-plays, eats & sleeps and takes full advantage of this high tech area</p>
-                            </div>
-                            
-                        </div>
-                    </div>
+            <div class="col-sm-4 col-lg-4 col-md-4">
+                <h4><a href="#">Contact Bob</a>
+                </h4>
+                <p>If you would like to contact Bob Ingram at work visit <a target="_blank" href="http://www.theparamountgroup.us/contact.html">www.theparamountgroup.us</a></p>
+                <a class="btn btn-primary" target="_blank" href="https://www.paramoutmedia.us">Current Project</a>
+            </div>
 
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <img src="img/vesper-opt-230x213.jpg" alt="vesper the cat">
-                            <div class="caption">
-                                <h4><a href="#">Vote for Vesper</a></h4>
-                                <p>Vesper is a California native and enjoys hanging out with his friend Fezzik. Vesper is always up for playtime</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <img src="img/marvin-opt-320x213.jpg" alt="marvin the cat">
-                            <div class="caption">
-                                <h4><a href="#">Vote for Marvin</a>
-                                </h4>
-                                <p>Marvin lives in Melbourne Beach, FL. He loves to watch sunrises over the ocean and enjoys warm summer's breeze.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <img src="img/cats-in-window-opt-230x213.jpg" alt="two cats in the window">
-                            <div class="caption">
-                                <h4><a href="#">Vote for 2-Cats in the Window</a></h4>
-                                <p>If you thought one cat was cute how about two.</p>
-                            </div>
-                        </div>
-                    </div> -->
-
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <h4><a href="#">Contact Bob</a>
-                        </h4>
-                        <p>If you would like to contact Bob Ingram at work visit <a target="_blank" href="http://www.theparamountgroup.us/contact.html">www.theparamountgroup.us</a></p>
-                        <a class="btn btn-primary" target="_blank" href="http://www.theparamountgroup.us">Bob's Resume</a>
-                    </div>
-
-                </div> <!-- End Row  -->
+               </div> <!-- End Row  -->
 
 
     </div>
