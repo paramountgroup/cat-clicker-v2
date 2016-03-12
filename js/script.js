@@ -14,7 +14,7 @@ var catArray = [
 	imgSrcSmall: 'img/fezzik-opt-230x153.jpg',
 	imgSrcLarge: 'img/fezzik-3-opt-1920x1280.jpg',
 	alt: 'fezzik photo',
-	bio: 'Fezzik is a fun loving cat that lives in San Mateo CA. Fezzik enjoys the teperate climate of the Bay Area-plays, eats & sleeps and takes full advantage of this high tech area'
+	bio: 'Fezzik is a fun loving cat that lives in Menlo Park CA. Fezzik enjoys the temperate climate of the Bay Area-plays, eats & sleeps and takes full advantage of this high tech area'
   },
   { clickCount: 0,
 	name: 'Vesper',
