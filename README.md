@@ -4,6 +4,8 @@
 
 Vote for your favorite cat and see how many you can get:
 
+## [Cat Clicker](http://paramountgroup.github.io/cat-clicker-v2/)
+
 ## Creator
 
 Cat Clicker was created for Udacity Front End Developer Class
