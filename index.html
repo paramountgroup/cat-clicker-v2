@@ -65,19 +65,11 @@
 
             <table class="col-md-3">
                 <th class="lead">Leader Board</th>
-                <tbody class="list-group">
-                	<tr class="list-group-item ">
-                 
-                          <td data-bind="text: name"></td>
-                          <td class="badge badge-vertical" data-bind="text: clickCount" ></td>
-              
-                         
-                     </tr>  <!-- My attempt to data bind with knockout no luck -->
-                    
-                    <span class="list-group-item">Fezzik&nbsp&nbsp<input id="qty2" value="0" /></span>
-                    <span class="list-group-item">Vesper&nbsp<input id="qty3" value="0" /></span>
-                    <span class="list-group-item">Marvin&nbsp&nbsp<input id="qty4" value="0" /></span>
-                    <span class="list-group-item">2-Cats&nbsp&nbsp<input id="qty5" value="0" /></span>
+                <tbody class="list-group" data-bind="foreach: catList">
+                	<tr class="list-group-item">
+                        <td data-bind="text: name, click: $parent.incrementCounter"></td>
+                        <td class="badge badge-vertical" data-bind="text: clickCount" ></td>     
+                    </tr>  <!-- My attempt to data bind with knockout no luck -->
                 </tbody>
             </table>
 
@@ -85,19 +77,19 @@
 
                 <div class="row carousel-holder">
 
-                    <div class="col-md-12">
+                    <div class="col-md-9">
                         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                             <ol class="carousel-indicators">
                                 <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
                                 <li data-target="#carousel-example-generic" data-slide-to="1"></li>
                                 <li data-target="#carousel-example-generic" data-slide-to="2"></li>
                             </ol>
-                            <div class="carousel-inner">
+                            <div class="carousel-inner" data-bind="foreach: catList">
                                 <div class="item active">
-                                    <img class="slide-image" src="" alt="kitkat photo" data-bind="click: incrementCounter, attr: {src:imgSrc}">
+                                    <img class="slide-image" src"" alt="kitkat photo" data-bind="click: $parent.incrementCounter, attr: {src:imgSrcLarge}">
                                 </div>
-                                <div class="item">
-                                    <img class="slide-image" src="img/fezzik-3-opt-1920x1280.jpg" alt="fezzik photo">
+  <!--                              <div class="item">
+                                    <img class="slide-image" src="img/fezzik-3-opt-1920x1280.jpg" alt="fezzik photo" >
                                 </div>
                                 <div class="item">
                                     <img class="slide-image" src="img/vesper-opt-1920x1280.jpg" alt="vesper photo">
@@ -107,7 +99,7 @@
                                 </div>
                                  <div class="item">
                                     <img class="slide-image" src="img/cats-in-window-opt-1920x1280.jpg" alt="cats in window photo">
-                                </div>
+                                </div> -->
                             </div>
                             <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
                                 <span class="glyphicon glyphicon-chevron-left"></span>
@@ -120,20 +112,25 @@
 
                 </div>
 
-                <div class="row">
 
-                    <div class="col-sm-4 col-lg-4 col-md-4">
+            </div>
+
+        </div>
+        <div class="row">
+
+                    <div data-bind="foreach: catList" class="col-sm-4 col-lg-4 col-md-4"  >
                         <div class="thumbnail">
-                            <img src="img/kitkat-opt-230x153.jpg" alt="photo of kitkat" onclick="modify_qty(1)">
+                            <img src="" alt="" data-bind="click: $parent.incrementCounter, attr: {src:imgSrcSmall}">
                             <div class="caption">
-                                <h4><a href="#">Vote for KitKat</a></h4>
-                                <p>KitKat lives in Satellite Beach,FL - Loves to play in the backyard chasing lizards, enjoys sunbathing, and Friday night BBQ.</p>
+                            	<h4>Vote for <span data-bind="text: name"></span></h4>
+                                <h4 ></h4>
+                                <p data-bind="text: bio"></p> 
                             </div>
                            
                         </div>
                     </div>
 
-                    <div class="col-sm-4 col-lg-4 col-md-4">
+ <!--                   <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
                             <img src="img/fezzik-opt-230x153.jpg" alt="fezzik the cat" onclick="modify_qty(1)">
                             <div class="caption">
@@ -147,7 +144,7 @@
 
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
-                            <img src="img/vesper-opt-230x2123.jpg" alt="vesper the cat">
+                            <img src="img/vesper-opt-230x213.jpg" alt="vesper the cat">
                             <div class="caption">
                                 <h4><a href="#">Vote for Vesper</a></h4>
                                 <p>Vesper is a California native and enjoys hanging out with his friend Fezzik. Vesper is always up for playtime</p>
@@ -174,7 +171,7 @@
                                 <p>If you thought one cat was cute how about two.</p>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <h4><a href="#">Contact Bob</a>
@@ -183,11 +180,8 @@
                         <a class="btn btn-primary" target="_blank" href="http://www.theparamountgroup.us">Bob's Resume</a>
                     </div>
 
-                </div>
+                </div> <!-- End Row  -->
 
-            </div>
-
-        </div>
 
     </div>
     <!-- /.container -->
@@ -214,7 +208,8 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
     
-  
+  <!-- Script for Counter  -->
+    <script type="text/javascript" src="js/catarray.js"></script>
     
       <!-- knoockout file  -->
     <script type="text/javascript" src="js/knockout-3.4.0.js"></script>
