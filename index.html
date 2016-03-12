@@ -79,13 +79,13 @@
         
             <div data-bind="foreach: catList">
 
-                    <div class="col-sm-4 col-lg-4 col-md-4"  >
+                    <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
                             <img src="" alt="" data-bind="click: $parent.incrementCounter, attr: {src:imgSrcSmall}">
                             <div class="caption">
-                            	<h4>Vote for <span data-bind="text: name"></span></h4>
+                            	<h4>Vote for <span data-bind="text: name, click: $parent.incrementCounter"></span></h4>
                                 <h4 ></h4>
-                                <p data-bind="text: bio"></p> 
+                                <p data-bind="text: bio, click: $parent.incrementCounter"></p> 
                             </div>
                            
                         </div>
@@ -141,3 +141,5 @@
 </body>
 
 </html>
+Status API Training Shop Blog About Pricing
+© 2016 GitHub, Inc. Terms Privacy Security Contact Help
